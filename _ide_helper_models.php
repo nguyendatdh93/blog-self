@@ -1,25 +1,25 @@
 <?php
 
+declare(strict_types=1);
+
 // @formatter:off
 /**
  * A helper file for your Eloquent Models
  * Copy the phpDocs from this file to the correct Model,
  * And remove them from this file, to prevent double declarations.
- *
- * @author Barry vd. Heuvel <barryvdh@gmail.com>
  */
 
 namespace App\Models{
     /**
-     * App\Models\FriendshipLink
+     * App\Models\FriendshipLink.
      *
      * @property int                             $id         主键id
      * @property string                          $name       链接名
      * @property string                          $url        链接地址
-     * @property int|null                        $sort       排序
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $deleted_at
+     * @property null|int                        $sort       排序
+     * @property null|\Illuminate\Support\Carbon $created_at
+     * @property null|\Illuminate\Support\Carbon $updated_at
+     * @property null|\Illuminate\Support\Carbon $deleted_at
      * @property-write mixed $first_name
      *
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\FriendshipLink newModelQuery()
@@ -41,18 +41,18 @@ namespace App\Models{
 
 namespace App\Models{
     /**
-     * App\Models\User
+     * App\Models\User.
      *
      * @property int                             $id
      * @property string                          $name
      * @property string                          $email
-     * @property \Illuminate\Support\Carbon|null $email_verified_at
+     * @property null|\Illuminate\Support\Carbon $email_verified_at
      * @property string                          $password
-     * @property string|null                     $remember_token
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $deleted_at
-     * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
+     * @property null|string                     $remember_token
+     * @property null|\Illuminate\Support\Carbon $created_at
+     * @property null|\Illuminate\Support\Carbon $updated_at
+     * @property null|\Illuminate\Support\Carbon $deleted_at
+     * @property-read \Illuminate\Notifications\DatabaseNotification[]|\Illuminate\Notifications\DatabaseNotificationCollection $notifications
      *
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User newQuery()
@@ -75,14 +75,14 @@ namespace App\Models{
 
 namespace App\Models{
     /**
-     * App\Models\Config
+     * App\Models\Config.
      *
      * @property int                             $id         主键
      * @property string                          $name       配置项键名
      * @property mixed                           $value      配置项键值 1表示开启 0 关闭
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $deleted_at
+     * @property null|\Illuminate\Support\Carbon $created_at
+     * @property null|\Illuminate\Support\Carbon $updated_at
+     * @property null|\Illuminate\Support\Carbon $deleted_at
      *
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Config newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Config newQuery()
@@ -102,7 +102,7 @@ namespace App\Models{
 
 namespace App\Models{
     /**
-     * App\Models\Article
+     * App\Models\Article.
      *
      * @property int                             $id          文章表主键
      * @property int                             $category_id 分类id
@@ -115,11 +115,11 @@ namespace App\Models{
      * @property string                          $cover       封面图
      * @property int                             $is_top      是否置顶 1是 0否
      * @property int                             $click       点击数
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $deleted_at
+     * @property null|\Illuminate\Support\Carbon $created_at
+     * @property null|\Illuminate\Support\Carbon $updated_at
+     * @property null|\Illuminate\Support\Carbon $deleted_at
      * @property-read \App\Models\Category $category
-     * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tag[] $tags
+     * @property-read \App\Models\Tag[]|\Illuminate\Database\Eloquent\Collection $tags
      *
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Article newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Article newQuery()
@@ -147,15 +147,15 @@ namespace App\Models{
 
 namespace App\Models{
     /**
-     * App\Models\Nav
+     * App\Models\Nav.
      *
      * @property int                             $id         菜单主键
      * @property int                             $sort       排序
      * @property string                          $name       菜单名
      * @property string                          $url        链接
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $deleted_at
+     * @property null|\Illuminate\Support\Carbon $created_at
+     * @property null|\Illuminate\Support\Carbon $updated_at
+     * @property null|\Illuminate\Support\Carbon $deleted_at
      *
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nav newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nav newQuery()
@@ -176,13 +176,13 @@ namespace App\Models{
 
 namespace App\Models{
     /**
-     * App\Models\Console
+     * App\Models\Console.
      *
      * @property int                             $id
      * @property string                          $name       名称
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $deleted_at
+     * @property null|\Illuminate\Support\Carbon $created_at
+     * @property null|\Illuminate\Support\Carbon $updated_at
+     * @property null|\Illuminate\Support\Carbon $deleted_at
      *
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Console newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Console newQuery()
@@ -201,14 +201,14 @@ namespace App\Models{
 
 namespace App\Models{
     /**
-     * App\Models\Tag
+     * App\Models\Tag.
      *
      * @property int                             $id         标签主键
      * @property string                          $name       标签名
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $deleted_at
-     * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Article[] $articles
+     * @property null|\Illuminate\Support\Carbon $created_at
+     * @property null|\Illuminate\Support\Carbon $updated_at
+     * @property null|\Illuminate\Support\Carbon $deleted_at
+     * @property-read \App\Models\Article[]|\Illuminate\Database\Eloquent\Collection $articles
      *
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tag newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tag newQuery()
@@ -227,7 +227,7 @@ namespace App\Models{
 
 namespace App\Models{
     /**
-     * App\Models\Category
+     * App\Models\Category.
      *
      * @property int                             $id          分类主键id
      * @property string                          $name        分类名称
@@ -235,10 +235,10 @@ namespace App\Models{
      * @property string                          $description 描述
      * @property int                             $sort        排序
      * @property int                             $pid         父级栏目id
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $deleted_at
-     * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Article[] $articles
+     * @property null|\Illuminate\Support\Carbon $created_at
+     * @property null|\Illuminate\Support\Carbon $updated_at
+     * @property null|\Illuminate\Support\Carbon $deleted_at
+     * @property-read \App\Models\Article[]|\Illuminate\Database\Eloquent\Collection $articles
      *
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Category newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Category newQuery()
@@ -261,15 +261,15 @@ namespace App\Models{
 
 namespace App\Models{
     /**
-     * App\Models\GitProject
+     * App\Models\GitProject.
      *
      * @property int                             $id         项目主键
      * @property int                             $sort       排序
      * @property int                             $type       1:github 2:gitee
      * @property string                          $name       项目名
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $deleted_at
+     * @property null|\Illuminate\Support\Carbon $created_at
+     * @property null|\Illuminate\Support\Carbon $updated_at
+     * @property null|\Illuminate\Support\Carbon $deleted_at
      *
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\GitProject newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\GitProject newQuery()
@@ -290,7 +290,7 @@ namespace App\Models{
 
 namespace App\Models{
     /**
-     * 评论
+     * 评论.
      *
      * @property int                             $id            主键id
      * @property int                             $oauth_user_id 评论用户id 关联oauth_user表的id
@@ -299,9 +299,9 @@ namespace App\Models{
      * @property int                             $article_id    文章id
      * @property mixed                           $content       内容
      * @property int                             $status        1:已审核 0：未审核
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $deleted_at
+     * @property null|\Illuminate\Support\Carbon $created_at
+     * @property null|\Illuminate\Support\Carbon $updated_at
+     * @property null|\Illuminate\Support\Carbon $deleted_at
      * @property-read \App\Models\Article $article
      * @property-read \App\Models\OauthUser $socialiteUser
      *
@@ -327,13 +327,13 @@ namespace App\Models{
 
 namespace App\Models{
     /**
-     * App\Models\ArticleTag
+     * App\Models\ArticleTag.
      *
      * @property int                             $article_id 文章id
      * @property int                             $tag_id     标签id
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $deleted_at
+     * @property null|\Illuminate\Support\Carbon $created_at
+     * @property null|\Illuminate\Support\Carbon $updated_at
+     * @property null|\Illuminate\Support\Carbon $deleted_at
      *
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\ArticleTag newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\ArticleTag newQuery()
@@ -352,7 +352,7 @@ namespace App\Models{
 
 namespace App\Models{
     /**
-     * App\Models\Site
+     * App\Models\Site.
      *
      * @property int                             $id
      * @property int                             $oauth_user_id 第三方用户id
@@ -361,9 +361,9 @@ namespace App\Models{
      * @property string                          $url           网站链接
      * @property int                             $audit         审核状态1为通过审核
      * @property int                             $sort          排序
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $deleted_at
+     * @property null|\Illuminate\Support\Carbon $created_at
+     * @property null|\Illuminate\Support\Carbon $updated_at
+     * @property null|\Illuminate\Support\Carbon $deleted_at
      * @property-read \App\Models\OauthUser $socialiteUser
      *
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Site newModelQuery()
@@ -388,7 +388,7 @@ namespace App\Models{
 
 namespace App\Models{
     /**
-     * App\Models\OauthUser
+     * App\Models\OauthUser.
      *
      * @property int                             $id             主键id
      * @property int                             $type           类型 1：QQ  2：新浪微博 3：github
@@ -400,11 +400,11 @@ namespace App\Models{
      * @property int                             $login_times    登录次数
      * @property string                          $email          邮箱
      * @property int                             $is_admin       是否是admin
-     * @property string|null                     $remember_token
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $deleted_at
-     * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
+     * @property null|string                     $remember_token
+     * @property null|\Illuminate\Support\Carbon $created_at
+     * @property null|\Illuminate\Support\Carbon $updated_at
+     * @property null|\Illuminate\Support\Carbon $deleted_at
+     * @property-read \Illuminate\Notifications\DatabaseNotification[]|\Illuminate\Notifications\DatabaseNotificationCollection $notifications
      *
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\OauthUser newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\OauthUser newQuery()
@@ -432,13 +432,13 @@ namespace App\Models{
 
 namespace App\Models{
     /**
-     * App\Models\Chat
+     * App\Models\Chat.
      *
      * @property int                             $id         主键id
      * @property string                          $content    内容
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $deleted_at
+     * @property null|\Illuminate\Support\Carbon $created_at
+     * @property null|\Illuminate\Support\Carbon $updated_at
+     * @property null|\Illuminate\Support\Carbon $deleted_at
      *
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Chat newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Chat newQuery()
@@ -457,7 +457,7 @@ namespace App\Models{
 
 namespace App\Models{
     /**
-     * App\Models\Base
+     * App\Models\Base.
      *
      * @method static bool|null forceDelete()
      * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Base newModelQuery()
